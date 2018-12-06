@@ -12,6 +12,8 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 
+//Used template to create -- No time
+
 @Singleton
 public class FlickrViewModelFactory implements ViewModelProvider.Factory {
 

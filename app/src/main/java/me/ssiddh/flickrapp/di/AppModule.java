@@ -36,4 +36,10 @@ class AppModule {
         return new Picasso.Builder(context).build();
     }
 
+    @Singleton
+    @Provides
+    ViewModelProvider.Factory provideViewModelFactory(ViewModelSubComponent.Builder viewModelSubComponent) {
+        return new FlickrViewModelFactory(viewModelSubComponent.build());
+    }
+
 }
