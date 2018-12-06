@@ -12,7 +12,8 @@ import me.ssiddh.flickrapp.FlickrApplication;
 //TODO: Add appmodule and activity modules
 @Singleton
 @Component(modules = {
-        AndroidInjectionModule.class
+        AndroidInjectionModule.class,
+        AppModule.class
 })
 public interface AppComponent {
 

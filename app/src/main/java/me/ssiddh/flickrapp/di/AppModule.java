@@ -1,6 +1,9 @@
 package me.ssiddh.flickrapp.di;
 
 import android.arch.lifecycle.ViewModelProvider;
+import android.content.Context;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -26,6 +29,11 @@ class AppModule {
     @Provides
     FlickrService provideFlickrService() {
         return new Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build().create(FlickrService.class);
+    }
+
+    @Provides
+    Picasso providePicasso(Context context) {
+        return new Picasso.Builder(context).build();
     }
 
 }
