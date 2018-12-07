@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName;
 public class FlickrPhoto {
 
     @NonNull
-    private int id;
+    private long id;
     private String server;
     private String title;
     @SerializedName("url_m")
     private String url;
 
-    public FlickrPhoto(@NonNull int id, String server, String title, String url) {
+    public FlickrPhoto(@NonNull long id, String server, String title, String url) {
         this.id = id;
         this.server = server;
         this.title = title;
@@ -21,11 +21,11 @@ public class FlickrPhoto {
     }
 
     @NonNull
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(@NonNull int id) {
+    public void setId(@NonNull long id) {
         this.id = id;
     }
 
