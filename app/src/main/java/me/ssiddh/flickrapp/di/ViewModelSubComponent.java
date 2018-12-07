@@ -1,6 +1,7 @@
 package me.ssiddh.flickrapp.di;
 
 import dagger.Subcomponent;
+import me.ssiddh.flickrapp.viewmodel.SearchActivityViewModel;
 
 @Subcomponent
 public interface ViewModelSubComponent {
@@ -9,6 +10,5 @@ public interface ViewModelSubComponent {
         ViewModelSubComponent build();
     }
 
-    //TODO: Add different viewmodels here.
-    //DogsListViewModel dogsListViewModel();
+    SearchActivityViewModel searchActivityViewModel();
 }

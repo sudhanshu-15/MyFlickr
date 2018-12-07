@@ -11,6 +11,8 @@ import java.util.concurrent.Callable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import me.ssiddh.flickrapp.viewmodel.SearchActivityViewModel;
+
 
 //Used template to create -- No time
 
@@ -23,7 +25,7 @@ public class FlickrViewModelFactory implements ViewModelProvider.Factory {
     public FlickrViewModelFactory(ViewModelSubComponent viewModelSubComponent) {
         creators = new ArrayMap<>();
 
-        //TODO: Add viewmodels to creator
+        creators.put(SearchActivityViewModel.class, () -> viewModelSubComponent.searchActivityViewModel());
     }
 
     @NonNull

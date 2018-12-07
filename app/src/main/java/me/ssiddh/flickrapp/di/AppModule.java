@@ -1,5 +1,6 @@
 package me.ssiddh.flickrapp.di;
 
+import android.app.Application;
 import android.arch.lifecycle.ViewModelProvider;
 import android.content.Context;
 
@@ -13,6 +14,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import me.ssiddh.flickrapp.BuildConfig;
+import me.ssiddh.flickrapp.FlickrApplication;
 import me.ssiddh.flickrapp.api.FlickrService;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -40,6 +42,11 @@ class AppModule {
     @Provides
     ViewModelProvider.Factory provideViewModelFactory(ViewModelSubComponent.Builder viewModelSubComponent) {
         return new FlickrViewModelFactory(viewModelSubComponent.build());
+    }
+
+    @Provides
+    Context provideContext(Application application) {
+        return application;
     }
 
 }

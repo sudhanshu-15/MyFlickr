@@ -9,11 +9,11 @@ import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import me.ssiddh.flickrapp.FlickrApplication;
 
-//TODO: Add appmodule and activity modules
 @Singleton
 @Component(modules = {
         AndroidInjectionModule.class,
-        AppModule.class
+        AppModule.class,
+        ActivityModule.class
 })
 public interface AppComponent {
 
